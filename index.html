@@ -173,11 +173,11 @@
 
       <div class="body-wrap">
   
-    <article id="post-new-test" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-使用-Hide类" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/22/new-test/" class="article-date">
-  	<time datetime="2016-12-22T08:22:39.000Z" itemprop="datePublished">2016-12-22</time>
+      <a href="/2017/08/28/使用-Hide类/" class="article-date">
+  	<time datetime="2017-08-28T12:15:15.000Z" itemprop="datePublished">2017-08-28</time>
 </a>
     </div>
   
@@ -190,7 +190,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/22/new-test/">new test</a>
+      <a class="article-title" href="/2017/08/28/使用-Hide类/">使用@Hide类</a>
     </h1>
   
 
@@ -199,7 +199,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ol>
+<li>选择你的目标平台X</li>
+<li>创建目标平台X的模拟器</li>
+<li>启动模拟器，下载/system/framework/framework.jar</li>
+<li>重命名framework.jar -&gt; framework.zip</li>
+<li>从framework.zip中抽取classes.dex</li>
+<li>使用dex2jar工具，将其转换成classes.jar</li>
+<li>重命名classes.jar -&gt; framework-classes.zip</li>
+<li>拷贝android.jar –&gt; custom-android.zip</li>
+<li>解压custom-android.zip至custom-android文件夹</li>
+<li>将framework-classes.zip中所有文件拷贝至custom-android文件夹（覆盖存在的文件）</li>
+<li>压缩custom-android文件夹成original-android.zip</li>
+<li>重命名original-android.zip -&gt; original-android.jar</li>
+</ol>
+
       
     </div>
     
@@ -413,7 +427,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 冰珊孤雪
+    		&copy; 2019 冰珊孤雪
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
