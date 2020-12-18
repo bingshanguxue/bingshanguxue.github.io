@@ -154,6 +154,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-SecurityException" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/28/SecurityException/">使用@Hide类</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/28/SecurityException/" class="archive-article-date">
+  	<time datetime="2017-08-28T12:15:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2020</span>-<span class="number">12</span>-<span class="number">18</span> <span class="number">09</span>:<span class="number">49</span>:<span class="number">15.703</span> <span class="number">8153</span>-<span class="number">8252</span>/? E/AndroidRuntime: FATAL EXCEPTION: Thread-<span class="number">2</span></span><br><span class="line">    Process: com.realsil.sdk.sample, PID: <span class="number">8153</span></span><br><span class="line">    java.lang.SecurityException: WifiService: Neither user <span class="number">10261</span> nor current process has android.permission.CHANGE_WIFI_MULTICAST_STATE.</span><br><span class="line">        at android.os.Parcel.createException(Parcel.java:<span class="number">2085</span>)</span><br><span class="line">        at android.os.Parcel.readException(Parcel.java:<span class="number">2053</span>)</span><br><span class="line">        at android.os.Parcel.readException(Parcel.java:<span class="number">2001</span>)</span><br><span class="line">        at android.net.wifi.IWifiManager$Stub$Proxy.acquireMulticastLock(IWifiManager.java:<span class="number">3842</span>)</span><br><span class="line">        at android.net.wifi.WifiManager$MulticastLock.acquire(WifiManager.java:<span class="number">4371</span>)</span><br><span class="line">        at l0.h$b.run(SourceFile:<span class="number">53</span>)</span><br><span class="line">     Caused by: android.os.RemoteException: Remote stack trace:</span><br><span class="line">        at android.app.ContextImpl.enforce(ContextImpl.java:<span class="number">1955</span>)</span><br><span class="line">        at android.app.ContextImpl.enforceCallingOrSelfPermission(ContextImpl.java:<span class="number">1983</span>)</span><br><span class="line">        at com.android.server.wifi.WifiServiceImpl.enforceMulticastChangePermission(WifiServiceImpl.java:<span class="number">989</span>)</span><br><span class="line">        at com.android.server.wifi.WifiServiceImpl.acquireMulticastLock(WifiServiceImpl.java:<span class="number">3222</span>)</span><br><span class="line">        at android.net.wifi.IWifiManager$Stub.onTransact(IWifiManager.java:<span class="number">1729</span>)</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/28/SecurityException/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-使用-Hide类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
