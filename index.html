@@ -154,27 +154,37 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider-1/">java.lang.RuntimeException: Unable to get provider android.support.v4.content.FileProvider</a>
+      <a class="article-title" href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider/">java.lang.RuntimeException: Unable to get provider android.support.v4.content.FileProvider</a>
     </h1>
   
 
         
-        <a href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider-1/" class="archive-article-date">
-  	<time datetime="2020-12-21T03:46:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-21</time>
+        <a href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider/" class="archive-article-date">
+  	<time datetime="2020-12-21T03:48:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="错误堆栈信息如下："><a href="#错误堆栈信息如下：" class="headerlink" title="错误堆栈信息如下："></a>错误堆栈信息如下：</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">2020-12-21 11:28:25.655 27994-27994/? E/AndroidRuntime: FATAL EXCEPTION: main</span><br><span class="line">    Process: com.realsil.apps.hrsserver, PID: 27994</span><br><span class="line">    java.lang.RuntimeException: Unable to get provider android.support.v4.content.FileProvider: java.lang.ClassNotFoundException: Didn't find class "android.support.v4.content.FileProvider" on path: DexPathList[[zip file "/data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/lib/arm, /data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/base.apk!/lib/armeabi, /system/lib, /hw_product/lib]]</span><br><span class="line">        at android.app.ActivityThread.installProvider(ActivityThread.java:7905)</span><br><span class="line">        at android.app.ActivityThread.installContentProviders(ActivityThread.java:7441)</span><br><span class="line">        at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7334)</span><br><span class="line">        at android.app.ActivityThread.access$2400(ActivityThread.java:308)</span><br><span class="line">        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2295)</span><br><span class="line">        at android.os.Handler.dispatchMessage(Handler.java:110)</span><br><span class="line">        at android.os.Looper.loop(Looper.java:219)</span><br><span class="line">        at android.app.ActivityThread.main(ActivityThread.java:8347)</span><br><span class="line">        at java.lang.reflect.Method.invoke(Native Method)</span><br><span class="line">        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513)</span><br><span class="line">        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1055)</span><br><span class="line">     Caused by: java.lang.ClassNotFoundException: Didn't find class "android.support.v4.content.FileProvider" on path: DexPathList[[zip file "/data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/base.apk"],nativeLibraryDirectories=[/data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/lib/arm, /data/app/com.realsil.apps.hrsserver--wCzDYkVN8HSp_1VHrcJqQ==/base.apk!/lib/armeabi, /system/lib, /hw_product/lib]]</span><br><span class="line">        at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:209)</span><br><span class="line">        at java.lang.ClassLoader.loadClass(ClassLoader.java:379)</span><br><span class="line">        at java.lang.ClassLoader.loadClass(ClassLoader.java:312)</span><br><span class="line">        at android.app.AppComponentFactory.instantiateProvider(AppComponentFactory.java:147)</span><br><span class="line">        at androidx.core.app.CoreComponentFactory.instantiateProvider(Unknown Source:0)</span><br><span class="line">        at android.app.ActivityThread.installProvider(ActivityThread.java:7889)</span><br><span class="line">        at android.app.ActivityThread.installContentProviders(ActivityThread.java:7441) </span><br><span class="line">        at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7334) </span><br><span class="line">        at android.app.ActivityThread.access$2400(ActivityThread.java:308) </span><br><span class="line">        at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2295) </span><br><span class="line">        at android.os.Handler.dispatchMessage(Handler.java:110) </span><br><span class="line">        at android.os.Looper.loop(Looper.java:219) </span><br><span class="line">        at android.app.ActivityThread.main(ActivityThread.java:8347) </span><br><span class="line">        at java.lang.reflect.Method.invoke(Native Method) </span><br><span class="line">        at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:513) </span><br><span class="line">        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1055)</span><br></pre></td></tr></table></figure>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>将 <code>AndroidManifest.xml</code>中的<code>android.support.v4.content.FileProvider</code>替换成<code>androidx.core.content.FileProvider</code>, 如下所示：</p>
+<ul>
+<li>old:</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">provider</span></span><br><span class="line">            <span class="attr">android:name</span>=<span class="string">"android.support.v4.content.FileProvider"</span></span><br><span class="line">            <span class="attr">android:authorities</span>=<span class="string">"$&#123;applicationId&#125;.fileProvider"</span></span><br><span class="line">            <span class="attr">android:exported</span>=<span class="string">"false"</span></span><br><span class="line">            <span class="attr">android:grantUriPermissions</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span></span><br><span class="line">                <span class="attr">android:name</span>=<span class="string">"android.support.FILE_PROVIDER_PATHS"</span></span><br><span class="line">                <span class="attr">android:resource</span>=<span class="string">"@xml/provider_paths"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">provider</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>new:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;provider</span><br><span class="line">    android:name=&quot;androidx.core.content.FileProvider&quot;</span><br><span class="line">    android:authorities=&quot;$&#123;applicationId&#125;.fileProvider&quot;</span><br><span class="line">    android:exported=&quot;false&quot;</span><br><span class="line">    android:grantUriPermissions=&quot;true&quot;&gt;</span><br><span class="line">    &lt;meta-data</span><br><span class="line">        android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;</span><br><span class="line">        android:resource=&quot;@xml/provider_paths&quot;/&gt;</span><br><span class="line">&lt;/provider&gt;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -186,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider-1/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/21/java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider/">展开全文 >></a>
         </p>
       
 
