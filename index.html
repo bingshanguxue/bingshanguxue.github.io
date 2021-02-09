@@ -154,6 +154,136 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Android-混淆" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/09/Android-混淆/">Android 混淆</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/09/Android-混淆/" class="archive-article-date">
+  	<time datetime="2021-02-09T05:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="shrinkResources"><a href="#shrinkResources" class="headerlink" title="shrinkResources"></a>shrinkResources</h1><p>aar 不能使用<code>shrinkResources</code>, 如果使用后编译会提示错误。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Resource</span> <span class="selector-tag">shrinker</span> <span class="selector-tag">cannot</span> <span class="selector-tag">be</span> <span class="selector-tag">used</span> <span class="selector-tag">for</span> <span class="selector-tag">libraries</span>.</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/09/Android-混淆/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-蓝牙进程重启" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/30/蓝牙进程重启/">蓝牙进程重启</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/30/蓝牙进程重启/" class="archive-article-date">
+  	<time datetime="2020-12-30T08:37:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>蓝牙操作过程中蓝牙自动重启。</p>
+<h1 id="log-堆栈信息"><a href="#log-堆栈信息" class="headerlink" title="log 堆栈信息"></a>log 堆栈信息</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">12-30 15:41:33.447 E/BTLD    ( 4677): ######################################################################</span><br><span class="line">12-30 15:41:33.447 E/BTLD    ( 4677): #</span><br><span class="line">12-30 15:41:33.447 E/BTLD    ( 4677): # WARNING : BTU HCI(id=0) command timeout. opcode=0x2013</span><br><span class="line">12-30 15:41:33.448 E/BTLD    ( 4677): #</span><br><span class="line">12-30 15:41:33.448 E/BTLD    ( 4677): ######################################################################</span><br><span class="line">12-30 15:41:33.448 E/bt-hci  ( 4677): Num consecutive HCI Cmd tout =1 Restarting BT process</span><br></pre></td></tr></table></figure>
+<p>从上面log分析，Num consecutive HCI Cmd tout =1 Restarting BT process。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">/*******************************************************************************</span><br><span class="line">**</span><br><span class="line">** Function         btu_hcif_cmd_timeout</span><br><span class="line">**</span><br><span class="line">** Description      Handle a command timeout</span><br><span class="line">**</span><br><span class="line">** Returns          void</span><br><span class="line">**</span><br><span class="line">*******************************************************************************/</span><br><span class="line">void btu_hcif_cmd_timeout (UINT8 controller_id)</span><br><span class="line">&#123;</span><br><span class="line">  ···</span><br><span class="line">    // btla-specific ++</span><br><span class="line">#if (defined(ANDROID_APP_INCLUDED) &amp;&amp; (ANDROID_APP_INCLUDED == TRUE))</span><br><span class="line">    ALOGE("######################################################################");</span><br><span class="line">    ALOGE("#");</span><br><span class="line">    ALOGE("# WARNING : BTU HCI(id=%d) command timeout. opcode=0x%x", controller_id, opcode);</span><br><span class="line">    ALOGE("#");</span><br><span class="line">    ALOGE("######################################################################");</span><br><span class="line">#else</span><br><span class="line">    HCI_TRACE_WARNING("BTU HCI(id=%d) command timeout. opcode=0x%x", controller_id, opcode);</span><br><span class="line">#endif</span><br><span class="line">  ···</span><br><span class="line">  </span><br><span class="line">  num_hci_cmds_timed_out++;</span><br><span class="line">    /* When we receive consecutive HCI cmd timeouts for &gt;=BTM_MAX_HCI_CMD_TOUT_BEFORE_RESTART</span><br><span class="line">     times, Bluetooth process will be killed and restarted */</span><br><span class="line">    if (num_hci_cmds_timed_out &gt;= BTM_MAX_HCI_CMD_TOUT_BEFORE_RESTART)</span><br><span class="line">    &#123;</span><br><span class="line">        HCI_TRACE_ERROR("Num consecutive HCI Cmd tout =%d Restarting BT process",num_hci_cmds_timed_out);</span><br><span class="line"></span><br><span class="line">        usleep(10000); /* 10 milliseconds */</span><br><span class="line">        /* Killing the process to force a restart as part of fault tolerance */</span><br><span class="line">        kill(getpid(), SIGKILL);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        HCI_TRACE_WARNING("HCI Cmd timeout counter %d", num_hci_cmds_timed_out);</span><br><span class="line"></span><br><span class="line">        /* If anyone wants device status notifications, give him one */</span><br><span class="line">        btm_report_device_status (BTM_DEV_STATUS_CMD_TOUT);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/30/蓝牙进程重启/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java-lang-RuntimeException-Unable-to-get-provider-android-support-v4-content-FileProvider" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -524,7 +654,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 冰珊孤雪
+    		&copy; 2021 冰珊孤雪
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
